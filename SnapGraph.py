@@ -207,6 +207,8 @@ def getGraph(origin_file, save_file):
 
 
 def creatLikeData(origin_file, db_file, k):
+    mu = 0
+    sigma = 0.05
     like = [0] * 10
     count = 0;
     conn = sqlite3.connect(db_file)
@@ -226,7 +228,7 @@ def creatLikeData(origin_file, db_file, k):
             for result1 in pr:
                 for result2 in qr:
                     for i in range(k):
-                        like[i] = ((result2[i + 1] + result1[i + 1] + random.uniform(0, .2)) / 2)
+                        like[i] = ((result2[i + 1] + result1[i + 1] + random.gauss(mu, sigma)) / 2)
             sqlupdate = "UPDATE userLike set "
             for i in range(k - 1):
                 sqlupdate += "like" + str(i + 1) + "=" + str(like[i]) + ","

@@ -16,7 +16,7 @@ from EW import ExactWeightJoinSample
 
 def getMethodCompare(query):
     b = []
-    EW = ExactWeightJoinSample("twitter_data.db", True, 5)
+    EW = ExactWeightJoinSample("twitter_data.db", False, 5)
     SampleNum = 20
     print("begin ExactWeightSampling")
     _, S, m = EW.RandomSample(SampleNum, query)

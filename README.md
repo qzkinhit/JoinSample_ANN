@@ -1,10 +1,11 @@
 # JoinSample_ANN
+## 简介
 
-## 基于JoinSample 和ANN的推荐算法实现的关注列表推荐应用
+* 一种基于JoinSample 和ANN的推荐算法实现的关注列表推荐应用
 
 ## start
 
-### python main.py
+* python main.py
 
 ## 参考复现的文献
 

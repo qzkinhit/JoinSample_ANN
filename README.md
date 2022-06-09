@@ -21,6 +21,7 @@
 * JoinSampleTest.py 测试sampleJoin的可行性
 * log.txt输出日志
 * main.py 优化算法运行demo
+* naive.py 朴素算法的demo
 * minhash 普通的minhash算法
 * nearoptimal 优化后的lsh 解决ann算法
 * RandomSample.py 抽样算法

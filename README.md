@@ -28,6 +28,7 @@
 * SnapGraph.py 数据集的预处理
 * test_xxx.py 相关函数的测试脚本
 * user_like.txt twitter_combined.txt 数据集
+* lrw_friend.py lrw-friend算法的实现
 
 ## 数据库
 

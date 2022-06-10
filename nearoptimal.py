@@ -12,9 +12,6 @@ from math import sqrt, log, ceil
 import numpy as np
 import scipy as sp
 
-# from scipy import array, dot, random, ones
-
-
 try:
     # Python 2
     from scipy import weave

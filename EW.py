@@ -7,6 +7,7 @@
 @IDE ：PyCharm
 """
 import copy
+import random
 import time
 
 import numpy as np
@@ -32,7 +33,7 @@ class ExactWeightJoinSample(JoinSample):
                 ts = self.conn.execute("SELECT source, destination FROM " + join_order[i])
                 for result in ts:
                     # print(result)
-                    W_set[result] = 1  # 初始化权重
+                    W_set[result] = random.uniform(0, 100)  # 初始化权重,通过随机数模拟这个用户的活跃程度，活跃程度越大，价值越高
                 W.append(W_set)
             else:
                 next_set = W[0]

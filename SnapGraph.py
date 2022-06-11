@@ -217,7 +217,8 @@ def creatLikeData(origin_file, db_file, k):
     print("end get graph,get allusers'like......")
     for node in graph.Nodes():
         count += 1
-        print("Total user 77097,has update" + str(count) + ", NowupdateId=" + str(node.GetId()) + ",need update " + str(
+        print("Total user 77097 or 5000,has update" + str(count) + ", NowupdateId=" + str(
+            node.GetId()) + ",need update " + str(
             node.GetInDeg()))
         for item in node.GetInEdges():
             p = "select * from userLike where " + str(node.GetId()) + "=""userLike.source"
@@ -242,8 +243,8 @@ def creatLikeData(origin_file, db_file, k):
 
 
 if __name__ == "__main__":
-    LoadTwitter("twitter_combined.txt", "twitter_data.db")
-    getGraph("twitter_combined.txt", "popular_user.txt")
-    LoadUserLike("user_like.txt", "twitter_data.db", 10);
-    # CreateUserLike("user_like.txt", "twitter_data.db",10);
-    # creatLikeData("twitter_combined.txt", "twitter_data.db",10)
+    LoadTwitter("smalldata.txt", "small_data.db")
+    # getGraph("smalldata.txt", "popular_user.txt")
+    # LoadUserLike("user_like.txt", "twitter_data.db", 10);
+    CreateUserLike("smalluserlike.txt", "small_data.db", 5);
+    creatLikeData("smalldata.txt", "small_data.db", 5)

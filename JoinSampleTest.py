@@ -12,7 +12,7 @@ from EW import ExactWeightJoinSample
 
 
 def getMethodCompare(query):
-    EW = ExactWeightJoinSample("twitter_data.db", False, 5)
+    EW = ExactWeightJoinSample("small_data.db", False, 5)
     SampleSet = [1, 10, 100, 200]
     times = []  # 抽样运行时间
 

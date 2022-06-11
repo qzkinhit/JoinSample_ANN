@@ -2,8 +2,7 @@ import matplotlib.pyplot as plt
 import random
 
 if __name__ == '__main__':
-    n = 100000
-    # n = 5000 # 人数
+    n = 5000  # 人数
     m = 4 * n  # 总关注数
     left = int(m * 0.005)
     right = int(m * 0.02)
@@ -35,7 +34,7 @@ if __name__ == '__main__':
             else:
                 lst.append([v, u])
                 break
-    output = 'twitter_combined.txt'
+    output = 'smalldata.txt'
     with open(output, 'w', encoding='utf-8') as file1:
         for i in range(m):
             print(lst[i][0], ' ', lst[i][1], file=file1)

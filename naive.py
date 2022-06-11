@@ -5,8 +5,8 @@ join twitter_user as s2 on s1.destination=s2.source
 group by s2.destination
 order by cnt desc
 """
-import sqlite3
 import numpy as np
+import sqlite3
 
 
 def get_sample(db_file, k):
@@ -45,4 +45,5 @@ def naive_friend(db_file, k, n, likes):
         ans.append((l[i][2], l[i][1]))
     return ans
 
-# print(naive_friend('twitter_data.db', 3, 3, (0.5, 0.5, 0.5, 0.5, 0.5)))
+
+print(naive_friend('small_data.db', 3, 3, (0.5, 0.5, 0.5, 0.5, 0.5)))

@@ -27,8 +27,10 @@
 * RandomSample.py 抽样算法
 * SnapGraph.py 数据集的预处理
 * test_xxx.py 相关函数的测试脚本
-* user_like.txt twitter_combined.txt 数据集
+* user_like.txt twitter_combined.txt smalldata.txt smalluserlike.txt 数据集
 * lrw_friend.py lrw-friend算法的实现
+* small_data.db 小数据数据库
+* data.py 生成小数据算法
 
 ## 数据库
 
